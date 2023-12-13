@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asikale</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header id="header" class="header">
+    <div class="logo"></div>
+    <div class="inicio"></div>
+  </header>
+
+  <ul class="menu">
+    <li>
+      <a class="menuItem"><img class="userImage" src="img/home.png" alt="Imagen1"></a>
+    </li>
+    <li>
+      <a class="menuItem" href="Form/index.html"><img class="userImage" src="img/user.png" alt="Imagen1"></a>
+    </li>
+  </ul>
+
+  <button type="button" class="hamburger">
+    <i class="menuIcon material-icons">menu</i>
+    <i class="closeIcon material-icons">close</i>
+  </button>
+
+
+    <img src="img/parallax-background-land-page.png" alt="Moustache png" id="parallaxEffects" class="parallaxEffects">
+
+
+  <h1>Asikale</h1>
+
+  <section class="nav-mid">
+    <ul class="botones">
+      <li onclick="text1()">Who we are?</li>
+      <li onclick="text2()">Find us?</li>
+    </ul>
+  </section>
+
+  <section class="asikaleText">
+    <p id="asikaleTextP"></p>
+  </section>
+
+  <section class="list reveal">
+    <ul class="list-image">
+      <li id="li1" onclick="firstImage()">Orch cut</li>
+      <li id="li2" onclick="secondImage()">Buzz cut</li>
+      <li id="li3" onclick="thirdImage()">Under cut</li>
+      <li id="li4" onclick="fourthImage()">Book cut</li>
+      <li id="li5" onclick="fifthImage()">Drown cut</li>
+    </ul>
+    <div class="carrousel-images">
+      <img id="image-selector" src="img/cut-1.jpg" alt="casa">
+    </div>
+  </section>
+
+  <section class="barbers reveal">
+    <div class="barbers-container">
+      <img src="img/barber-section-6.jpg" alt="Imagen1">
+      <h3>MANSOUR GALLARDO</h3>
+      <p>Expert in long hairstyles for gentlemen</p>
+      <ul>
+        <li><span class="material-symbols-outlined">timer</span>10-6</li>
+        <li><span class="material-symbols-outlined">call</span>611234567</li>
+      </ul>
+    </div>
+    <div class="barbers-container">
+      <img src="img/barber-section-5.jpg" alt="Imagen1">
+      <h3>Cynthia Montenegro</h3>
+      <p>I specialize in predominantly Afro hair</p>
+      <ul>
+        <li><span class="material-symbols-outlined">timer</span>10-6</li>
+        <li><span class="material-symbols-outlined">call</span>655432189</li>
+      </ul>
+    </div>
+    <div class="barbers-container">
+      <img src="img/barber-section-7.jpg" alt="Imagen1">
+      <h3>Mayer Breaking</h3>
+      <p>Curly hair is my passion</p>
+      <ul>
+        <li><span class="material-symbols-outlined">timer</span>10-6</li>
+        <li><span class="material-symbols-outlined">call</span>677890123</li>
+      </ul>
+    </div>
+    <div class="barbers-container">
+      <img src="img/barber-section-1.jpg" alt="Imagen1">
+      <h3>Echedey dust ||</h3>
+      <p>I handle every type of hair you can imagine</p>
+      <ul>
+        <li><span class="material-symbols-outlined">timer</span>10-6</li>
+        <li><span class="material-symbols-outlined">call</span>6019274816</li>
+      </ul>
+    </div>
+    <div class="barbers-container">
+      <img src="img/barber-section-3.jpg" alt="Imagen1">
+      <h3>Nabi The God</h3>
+      <p>Bears are nothing to me</p>
+      <ul>
+        <li><span class="material-symbols-outlined">timer</span>10-6</li>
+        <li><span class="material-symbols-outlined">call</span>644567890</li>
+      </ul>
+    </div>
+    <div class="barbers-container">
+      <img src="img/barber-section-4.jpg" alt="Imagen1">
+      <h3>Tybur proferus</h3>
+      <p>Beards are nothing for me</p>
+      <ul>
+        <li><span class="material-symbols-outlined">timer</span>10-6</li>
+        <li><span class="material-symbols-outlined">call</span>633210987</li>
+      </ul>
+    </div>
+  </section>
+
+<!-- CRUD -->
+  <div class="container text-center">
+    <h3>Ask your appointment</h3>
+  </div>
+  <div class="container">
+    <div class="container mb-5">
+      <div class="row">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Correo electrónico">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Phone</label>
+            <input type="number" class="form-control" id="inputPhone" placeholder="Teléfono">
+          </div>
+          <button type="submit" class="btn btn-primary" id="btnAdd" onclick="addData()">Add my appointment</button>
+          <button type="submit" class="btn btn-primary" id="btnUpdate">Update appointment</button>
+        </form>
+      </div>
+      <hr>
+      <table class="table table-bordered" id="tableData">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>name</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<!-- Footer with bootstrap -->
+  <footer class="text-center text-lg-start text-white" style="background-color: #2a2a2b">
+    <div class="container p-4 pb-0">
+      <section class="">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Asikale</h6>
+            <p>We would love to help you about anything</p>
+          </div>
+
+          <hr class="w-100 clearfix d-md-none">
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p><a class="text-white">Anti Hair Loss</a></p>
+            <p><a class="text-white">Shave cream</a></p>
+            <p><a class="text-white">Gel</a></p>
+            <p><a class="text-white">DIY</a></p>
+          </div>
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i>Maspalomas, doña perfecta 23 37012</p>
+            <p><i class="fas fa-envelope mr-3"></i> Asikale@contacmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +928 722 123</p>
+            <p><i class="fas fa-print mr-3"></i> +606 290 745</p>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #7e55ee" href="#!" role="button"><i class="fab fa-twitter"></i><img class="socialMedia" src="icons/gorjeo.png" alt=""></a>
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i><img class="socialMedia" src="icons/instagram.png" alt=""></a>
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i><img class="socialMedia" src="icons/whatsapp.png" alt=""></a>
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #c02a2a" href="#!" role="button"><i class="fab fa-github"></i><img class="socialMedia" src="icons/github.png" alt=""></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <h5>Asikale</h5>
+      <a class="text-white" href="https://www.google.com/maps/dir//asikale/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0xc40953a6a26597d:0xf67e944082248863?sa=X&ved=2ahUKEwjs34bi1IiDAxUgTKQEHQpXBpQQ9Rd6BAhCEAA">Find us on google maps</a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

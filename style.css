@@ -1,0 +1,386 @@
+/* All fonts */
+@font-face {
+  font-family: cinzel-black;
+  src: url(Fonts/cinzel.black.ttf);
+}
+@font-face {
+  font-family: cinzel-bold;
+  src: url(Fonts/cinzel.bold.ttf);
+}
+@font-face {
+  font-family: cinzel-decorative;
+  src: url(Fonts/cinzel.decorative-regular.ttf);
+}
+@font-face {
+  font-family: cinzel-regular;
+  src: url(Fonts/cinzel.regular.ttf);
+}
+@font-face {
+  font-family: cinzel-precious;
+  src: url(Fonts/precious.regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(
+    rgba(160, 173, 173, 0.514) 0%,
+    rgba(0, 0, 0, 0.87) 100%
+  );
+  padding-top: 28vh;
+  background-attachment: fixed;
+  font-family: cinzel-bold;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  color: white;
+
+}
+
+/* Header fixed */
+.header {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.39);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+
+.logo {
+  width: 10vw;
+  height: 10vh;
+  background-image: url(img/Logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 8px;
+}
+
+/* Menú desplegable */
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: black solid 1px;
+  /* background: white; */
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  transform: translateX(100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: radial-gradient(circle, rgb(95, 95, 95) 50%, rgb(49, 49, 49));
+  list-style: none;
+  padding-top: 4rem;
+
+}
+
+.menu li{
+  margin-left: 80px;
+  margin-top: 200px;
+}
+
+.userImage{
+  width: 70px;
+  height: 70px;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.showMenu {
+  transform: translateX(80%);
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(-150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/* .parallaxContainer{
+  position: relative;
+  top: 10px;
+  left: 620px;
+} */
+.parallaxEffects{
+  position: relative;
+  max-width: 400px;
+  left: 560px;
+  opacity: 0.7;
+  margin: 0 0 10vh 0;
+
+}
+
+/* Page */
+/* Top-page */
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  font-family: cinzel-decorative;
+  font-size: 5.5rem;
+}
+
+ul.botones {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul.botones li {
+  list-style-type: none;
+  text-align: center;
+  margin: 1em;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  font-size: 2.5rem;
+  &:hover {
+    scale: 1.2;
+  }
+}
+
+section.asikaleText {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  height: 30vh;
+}
+
+section.asikaleText p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Mid-page */
+/* Section-haircuts */
+section.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
+  height: 65vh;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+section.list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.list-image li {
+  padding: 7px;
+  border-radius: 6px;
+  font-size: 2.5em;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  display: inline-flex;
+  &:hover {
+    transform: scale(1.19);
+    transition: 1s;
+  }
+}
+
+div.carrousel-images img {
+  max-width: 42vh;
+  border-radius: 5px;
+}
+
+/* Barbers section */
+section.barbers {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2vh;
+  gap: 4vh;
+  margin-bottom: 10vh;
+}
+
+section.barbers div.barbers-container {
+  width: 90vw;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.39);
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.8s;
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+div.barbers-container img {
+  width: 85vw;
+  height: 35vh;
+  border-radius: 5px;
+  box-shadow: 0px 5px 30px;
+}
+
+div.barbers-container h3 {
+  font-size: x-large;
+}
+
+div.barbers-container p {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: large;
+}
+
+div.barbers-container ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  color: white;
+  padding: 0;
+}
+
+li span {
+  margin-right: 10px;
+}
+
+/* Bottom-page */
+/* Form with bootstrap */
+.appointment{
+  margin-bottom: 5vh;
+}
+
+/* update button */
+#btnUpdate{
+  display: none;
+}
+
+.crud{
+  background-color: red;
+}
+
+
+/* Footer */
+footer img.socialMedia{
+  width: 50px;
+}
+
+/* Media queries - page */
+@media (width <= 500px) {
+  .socialMedia{
+    display: flex;
+    flex-direction: row;
+  }
+  section.list{
+    margin-bottom: 20vh;
+  }
+  .footer{
+    flex-direction: column;
+    gap: 20px;
+  }
+  section.asikaleText {
+    margin-bottom: 30vh;
+  }
+  .showMenu{
+    transform: translateX(30%);
+  }
+  .parallaxEffects{
+    left: 70px;
+  }
+}
+
+@media (501px <= width <= 1440px) {
+  section.barbers {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section.barbers div.barbers-container {
+    width: 43vw;
+  }
+  div.barbers-container img {
+    width: 38vw;
+    height: 30vw;
+  }
+  .showMenu{
+    transform: translateX(50%);
+  }
+  section.list{
+    margin-bottom: 5vh;
+  }
+}
+
+@media (501px <= width <= 700px) {
+  .parallaxEffects{
+    left: 180px;
+  }
+}
+@media (700px <= width <= 1100px) {
+  .parallaxEffects{
+    left: 350px;
+  }
+}
+
+@media (width >= 1441px) {
+  section.barbers {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section.barbers div.barbers-container {
+    width: 28vw;
+  }
+  div.barbers-container img {
+    width: 20vw;
+    height: 28vh;
+  }
+  section.list {
+    gap: 0;
+    justify-content: unset;
+    flex-wrap: nowrap;
+    & ul {
+      width: 60vw;
+    }
+  }
+}

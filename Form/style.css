@@ -1,0 +1,100 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+}
+
+/* Efecto parallax primera imagen */
+.parallax-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-image: url("../img/form-background-parallax.jpg");
+  background-position: center;
+  background-size: cover;
+  row-gap: 4rem;
+  text-align: center;
+}
+
+/* Divisor de las imágenes */
+.buffer {
+  width: 100%;
+  min-height: 25vh;
+  background-color: rgb(82, 52, 7);
+}
+
+/* Parallax effect -  */
+.parallax-container2 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 6rem 0;
+  background-image: url("../img/form-background-parallax-2.jpg");
+  gap: 1.6em;
+}
+
+h1 {
+  font-size: 15rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: sans; color: rgb(255, 255, 255);
+}
+
+h4{
+    margin-bottom: 10px;
+}
+
+a {
+  display: inline-block;
+  padding: 1em 3.5em;
+  border-radius: 0.3em;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ h3 {
+  margin-top: 1em;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.space{
+  margin-bottom: 30px;
+}
+
+/* bootstrap da pereza */
+.adjust{
+  width: 50%;
+  justify-content: center;
+  align-self: center;
+}
